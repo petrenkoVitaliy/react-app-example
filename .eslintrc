@@ -1,0 +1,53 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "settings": {
+        "import/resolver": {
+            "babel-module": {}
+        }
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended", "prettier", "prettier/react", "prettier/standard"],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "legacyDecorators": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "experimentalDecorators": true
+    },
+    "plugins": ["react"],
+    "rules": {
+        "linebreak-style": ["error", "unix"],
+        "quotes": [
+            "error",
+            "single",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "max-len": [
+            "error",
+            {
+                "code": 120,
+                "ignoreStrings": true,
+                "ignoreComments": true,
+                "ignoreTrailingComments": true,
+                "ignoreTemplateLiterals": true
+            }
+        ],
+        "react/jsx-uses-vars": "error",
+        "react/prop-types": "off",
+        "react/jsx-indent": "error",
+        "react/jsx-filename-extension": [
+            "error",
+            {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        ]
+    }
+}
